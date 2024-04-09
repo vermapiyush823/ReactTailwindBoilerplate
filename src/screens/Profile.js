@@ -2,6 +2,7 @@ import ChevronRightIcon from "@mui/icons-material/ChevronRight";
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import placeHolderImage from "../assets/placeholder.svg";
+import Button from "../components/button";
 const Profile = () => {
   const [avatar, setAvatar] = useState(null);
   const [location, setLocation] = useState("");
@@ -21,8 +22,8 @@ const Profile = () => {
     }
   };
   return (
-    <div className="flex justify-center w-full items-center h-screen bg-white">
-      <div className=" w-2/3 px-6 py-8 rounded-lg">
+    <div className="flex justify-center w-full  h-screen bg-white">
+      <div className="w-2/3 px-6 rounded-lg mt-[10vh]">
         <h1 className="text-3xl font-bold mb-6">
           Welcome! Let's create your profile
         </h1>
@@ -32,7 +33,7 @@ const Profile = () => {
 
         <h2 className="text-lg font-semibold mb-3">Add an avatar</h2>
         <div className="mb-20 flex">
-          <div className="flex justify-start border rounded-full w-36 h-36 overflow-hidden">
+          <div className="flex justify-start border rounded-full overflow-hidden w-36 h-36 ">
             <img
               src={avatar || placeHolderImage}
               alt="Avatar"
@@ -70,15 +71,11 @@ const Profile = () => {
             className="w-full px-4 py-2 border-b border-gray-600 focus:outline-none"
           />
         </div>
-        <Link to="/interests">
-          <button
-            disabled={disabled}
-            className={`w-full ${
-              !disabled ? "bg-pink-500" : "bg-pink-200"
-            } text-white font-bold py-3 px-4 rounded-md`}
-          >
-            Next
-          </button>
+        <Link to="/domain">
+          <Button text={"Next"} disabled={disabled} />
+        </Link>
+        <Link to="/" className="text-gray-500 block m-3 text-start">
+          Or press RETURN
         </Link>
       </div>
     </div>

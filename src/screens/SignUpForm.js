@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import sideImage from "../assets/image.png";
-
+import Button from "../components/button";
 const SignUpForm = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -28,7 +28,6 @@ const SignUpForm = () => {
 
     if (!formData.name.trim()) {
       errors.name = "Name is required";
-
       isValid = false;
     }
 
@@ -68,17 +67,18 @@ const SignUpForm = () => {
     setErrors(errors);
     return isValid;
   };
-
-  const handleSubmit = (e) => {
+  const navigate = useNavigate();
+  function handleSubmit(e) {
+    // prevent default
     e.preventDefault();
     if (validateForm()) {
-      // Handle form submission logic here
+      navigate("/profile-setup");
     }
-  };
+  }
 
   return (
-    <div className="flex h-screen w-screen">
-      <div className="w-1/3 flex-shrink-0">
+    <div className="flex h-screen w-screen flex-col md:flex-row">
+      <div className=" md:w-1/3 flex-shrink-0">
         <img src={sideImage} alt="img" className="h-full w-full object-cover" />
       </div>
       <form
@@ -89,8 +89,8 @@ const SignUpForm = () => {
           <h1 className="text-4xl font-bold mb-6 text-left">
             Sign up to continue
           </h1>
-          <div className="flex gap-4">
-            <div className="mb-4 w-1/2">
+          <div className="flex gap-4 mb-8">
+            <div className="w-1/2">
               <label htmlFor="name" className="inline-block font-bold mb-2">
                 Name
               </label>
@@ -111,7 +111,7 @@ const SignUpForm = () => {
                 <p className="text-red-500 text-sm mt-1">{errors.name}</p>
               )}
             </div>
-            <div className="mb-4 w-1/2">
+            <div className="w-1/2">
               <label htmlFor="username" className="block font-bold mb-2">
                 Username
               </label>
@@ -133,7 +133,7 @@ const SignUpForm = () => {
               )}
             </div>
           </div>
-          <div className="mb-4">
+          <div className="mb-8">
             <label htmlFor="email" className="block font-bold mb-2">
               Email
             </label>
@@ -154,7 +154,7 @@ const SignUpForm = () => {
               <p className="text-red-500 text-sm mt-1">{errors.email}</p>
             )}
           </div>
-          <div className="mb-4">
+          <div className="mb-8">
             <label htmlFor="password" className="block font-bold mb-2">
               Password
             </label>
@@ -225,9 +225,8 @@ const SignUpForm = () => {
               </Link>
             </label>
           </div>
-          <button className="w-1/2 bg-pink-500 text-white font-bold py-3 px-4 rounded-md hover:bg-pink-600 transition-colors duration-300">
-            <Link to="/profile-setup">Sign Up</Link>
-          </button>
+          <Button text={"Sign Up"} />
+
           <p className="mt-4 text-sm text-gray-600">
             This site is protected by reCAPTCHA and the&nbsp;
             <Link to="#" className="text-blue-500">

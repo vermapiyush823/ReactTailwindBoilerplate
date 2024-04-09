@@ -78,9 +78,9 @@ const Footer = () => {
             ))}
           </ul>
         </div>
-        <div className="flex flex-wrap gap-5 w-full md:w-4/5 md:gap-10">
+        <div className="flex flex-wrap w-full md:w-4/5 md:gap-10">
           {linkHeading.map((heading, index) => (
-            <div key={index} className="flex flex-col w-1/3 md:w-1/5  lg:w-1/6">
+            <div key={index} className="flex flex-col w-1/2 md:w-1/5  lg:w-1/6">
               <h1 className="text-lg font-bold text-gray-800 mb-2">
                 {heading}
               </h1>
@@ -88,7 +88,7 @@ const Footer = () => {
                 {linkArray[index].map((link, index) => (
                   <li
                     key={index}
-                    className="hover:cursor-pointer text-gray-500 hover:text-gray-800 mb-2"
+                    className="flex md:flex-col hover:cursor-pointer text-gray-500 hover:text-gray-800 mb-2"
                   >
                     <a href="#">{link}</a>
                   </li>

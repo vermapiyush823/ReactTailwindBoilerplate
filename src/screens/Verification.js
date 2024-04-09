@@ -1,6 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+
 const Verification = () => {
   return (
     <>
@@ -32,16 +34,16 @@ const Verification = () => {
         <p className="text-gray-600 mb-8">
           Didn't receive the email? Check your Spam folder, it may have been
           caught by a filter. If you still don't see it, you can{" "}
-          <a href="#" className="text-pink-500 hover:underline">
+          <Link to="#" className="text-pink-500 hover:underline">
             resend the confirmation email
-          </a>
+          </Link>
           .
         </p>
         <p className="text-gray-600 mb-8">
           Wrong email address?{" "}
-          <a href="#" className="text-pink-500 hover:underline">
+          <Link to="#" className="text-pink-500 hover:underline">
             Change it
-          </a>
+          </Link>
         </p>
       </main>
       <Footer />

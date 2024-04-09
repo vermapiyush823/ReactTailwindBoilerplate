@@ -3,6 +3,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 import XIcon from "@mui/icons-material/X";
 import React from "react";
+import { Link } from "react-router-dom";
 
 const socialMedia = [FacebookIcon, XIcon, InstagramIcon, PinterestIcon];
 
@@ -63,9 +64,9 @@ const Footer = () => {
     <footer className="flex flex-col mt-20 px-14 pt-16 bg-neutral-100">
       <div className="flex pb-16 flex-col gap-10 md:flex-row">
         <div className="flex flex-col  md:w-1/5">
-          <a href="#" className="text-lg font-bold text-pink-500 mr-2">
+          <Link className="text-lg font-bold text-pink-500 mr-2">
             dribbble.
-          </a>
+          </Link>
           <p className="text-gray-600 py-5">
             Dribbble is the world's leading community for creatives to share,
             grow, and get hired.
@@ -90,7 +91,7 @@ const Footer = () => {
                     key={index}
                     className="flex md:flex-col hover:cursor-pointer text-gray-500 hover:text-gray-800 mb-2"
                   >
-                    <a href="#">{link}</a>
+                    <Link href="#">{link}</Link>
                   </li>
                 ))}
               </ul>

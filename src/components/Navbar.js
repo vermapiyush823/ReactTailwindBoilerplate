@@ -1,41 +1,29 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Navbar = () => {
   return (
     <nav className="flex items-center justify-center gap-10 w-full p-7 border-b border-gray-200 md:justify-between">
-      <a href="#" className="text-xl font-bold text-pink-500 md:hidden">
+      <Link className="text-xl font-bold text-pink-500 md:hidden">
         dribbble.
-      </a>
+      </Link>
       <ul className="md:flex float-start gap-5 items-center justify-center hidden">
         <li>
-          <a href="#" className="text-xl font-bold text-pink-500">
-            dribbble.
-          </a>
+          <Link className="text-xl font-bold text-pink-500">dribbble.</Link>
         </li>
         <li>
-          <a href="#" className="text-gray-600 hover:text-gray-800">
-            Inspiration
-          </a>
+          <Link className="text-gray-600 hover:text-gray-800">Profile</Link>
         </li>
         <li>
-          <a href="#" className="text-gray-600 hover:text-gray-800">
-            Find Work
-          </a>
+          <Link className="text-gray-600 hover:text-gray-800">Discover</Link>
         </li>
         <li>
-          <a href="#" className="text-gray-600 hover:text-gray-800">
-            Learn Design
-          </a>
+          <Link className="text-gray-600 hover:text-gray-800">Jobs</Link>
         </li>
         <li>
-          <a href="#" className="text-gray-600 hover:text-gray-800">
-            Go Pro
-          </a>
+          <Link className="text-gray-600 hover:text-gray-800">Hiring</Link>
         </li>
         <li>
-          <a href="#" className="text-gray-600 hover:text-gray-800">
-            Hire Designers
-          </a>
+          <Link className="text-gray-600 hover:text-gray-800">Post a Job</Link>
         </li>
       </ul>
       <ul className="flex float-start gap-5 items-center justify-center">
@@ -62,7 +50,7 @@ const Navbar = () => {
           </div>
         </li>
         <li>
-          <a href="#" className="text-gray-600 hover:text-gray-800">
+          <Link className="text-gray-600 hover:text-gray-800">
             {/* a bag svg */}
             <svg
               className="w-8 h-8"
@@ -76,11 +64,11 @@ const Navbar = () => {
                 clipRule="evenodd"
               ></path>
             </svg>
-          </a>
+          </Link>
         </li>
 
         <li>
-          <a href="#" className="text-gray-600 hover:text-gray-800">
+          <Link className="text-gray-600 hover:text-gray-800">
             <svg
               className="w-8 h-8"
               fill="currentColor"
@@ -93,15 +81,12 @@ const Navbar = () => {
                 clipRule="evenodd"
               ></path>
             </svg>
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            href="#"
-            className="bg-pink-500 text-white p-[9px] rounded-md hidden md:block"
-          >
+          <Link className="bg-pink-500 text-white p-[9px] rounded-md hidden md:block">
             Upload
-          </a>
+          </Link>
         </li>
       </ul>
     </nav>

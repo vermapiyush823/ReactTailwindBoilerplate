@@ -22,7 +22,7 @@ const Profile = () => {
     }
   };
   return (
-    <div className="flex justify-center w-full  h-screen bg-white">
+    <div className="flex justify-center items-center w-full h-screen bg-white">
       <div className="w-2/3 px-6 rounded-lg">
         <h1 className="text-3xl font-bold mb-6">
           Welcome! Let's create your profile

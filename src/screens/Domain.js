@@ -105,7 +105,7 @@ const Domain = () => {
             </div>
           ))}
         </div>
-        <div className="md:mt-16 mb-4 text-xl font-bold text-gray-700">
+        <div className="md:mt-16 text-center mb-4 text-xl font-bold text-gray-700">
           Anything else? You can select multiple
         </div>
         <Link to="/verification">

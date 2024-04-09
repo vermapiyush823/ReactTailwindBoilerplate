@@ -60,7 +60,7 @@ const linkArray = [
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col mt-20 border-t border-gray-200 px-14 pt-16">
+    <footer className="flex flex-col mt-20 px-14 pt-16 bg-neutral-100">
       <div className="flex pb-16 flex-col gap-10 md:flex-row">
         <div className="flex flex-col  md:w-1/5">
           <a href="#" className="text-lg font-bold text-pink-500 mr-2">
